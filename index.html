@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resources Dashboard</title>
+    <style>
+        /* Modern CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-primary: #3b82f6;
+            --accent-secondary: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Container Layout */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.7);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Button Grid Layout */
+        .button-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Styled Link Buttons */
+        .dashboard-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.75rem 1.5rem;
+            background-color: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Customizing specific buttons for visual hierarchy */
+        .btn-prompt {
+            border-bottom: 4px solid var(--accent-primary);
+        }
+
+        .btn-prompt:hover {
+            border-color: var(--accent-primary);
+            background-color: rgba(59, 130, 246, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -8px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-intro {
+            border-bottom: 4px solid var(--accent-secondary);
+        }
+
+        .btn-intro:hover {
+            border-color: var(--accent-secondary);
+            background-color: rgba(16, 185, 129, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px -8px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Dynamic icon replacement using pure CSS shapes */
+        .btn-icon {
+            margin-bottom: 0.75rem;
+            font-size: 1.75rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Learning Hub</h1>
+            <p class="subtitle">Quick access to your curated Google Sheets tracking resource logs.</p>
+        </header>
+
+        <main class="button-grid">
+            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6WVDogIYdWipC-KiTmrUdur1woqMuDclwoe6tOpOTuQ_VTaDlZZT3K3Amfd_wf8BZ14p_RNK7EN8S/pubhtml?gid=1349206886&single=true" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="dashboard-btn btn-prompt">
+                <span class="btn-icon">⚡</span>
+                Prompt Engineering
+            </a>
+
+            <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR6WVDogIYdWipC-KiTmrUdur1woqMuDclwoe6tOpOTuQ_VTaDlZZT3K3Amfd_wf8BZ14p_RNK7EN8S/pubhtml?gid=0&single=true" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="dashboard-btn btn-intro">
+                <span class="btn-icon">🧠</span>
+                Intro to AI
+            </a>
+        </main>
+
+        <footer>
+            <p>Links will open securely in a new browser tab.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
